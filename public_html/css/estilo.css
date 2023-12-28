@@ -1,0 +1,45 @@
+﻿.alerta_error {
+	color:red;
+}
+
+.error_general {
+	display:none;
+	margin-top: 10px;
+}
+
+.error {
+	display:none;
+}
+
+.inicio{
+	background-image: url(images/alcazar-de-segovia.jpg);
+	background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* No repite la imagen */
+}
+
+.ajustar{
+    /* ajustar anchura máxima respetando el diseño responsive */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ajustar2{
+    /* ajustar anchura máxima respetando el diseño responsive */
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ajustar2 input {
+    /* Ajusta el tamaño de los inputs según tus necesidades */
+    width: 300px;
+    height: 30px;
+}
+
+#colorFondo {
+    background-color: #dcdcdc;
+}
