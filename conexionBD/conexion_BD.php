@@ -1,7 +1,7 @@
 <?php
     $host = "localhost";
     $usuario = "root";
-    $password = "By4yuWb3";
+    $password = "contraseña";
     $puerto = "3306";
     $bd="notificador_tweb";
 ?>
