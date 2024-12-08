@@ -22,7 +22,7 @@ erDiagram
 
     ESTUDIANTE ||--o{ DIRIGIR_A : "1,N"
     DIRIGIR_A ||--o{ AVISO : "1,N"
-    DIRIGIR_A (*) {
+    DIRIGIR_A \(*\) {
         boolean Leido
     }
 
