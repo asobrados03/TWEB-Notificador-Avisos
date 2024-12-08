@@ -150,13 +150,13 @@ classDiagram
     Notificador --> Estudiante : registrar *
     Notificador --> Aviso : publicar *
 ```
-##Conclusión
+## Conclusión
 
 Este proyecto refleja un enfoque estructurado y metódico en el diseño y desarrollo de aplicaciones web orientadas a servicios. A través del uso de diagramas E-R y la metodología UWE, se ha logrado visualizar cómo interactúan los diferentes componentes del sistema, facilitando la implementación y el mantenimiento del mismo. La calificación obtenida en esta práctica es un reflejo del esfuerzo invertido y del aprendizaje adquirido.
-##Agradecimientos
+## Agradecimientos
 
 Agradezco a mis profesores y compañeros por su apoyo y orientación durante el desarrollo de esta práctica. Sus aportes han sido fundamentales para el éxito de este proyecto.
-##Contribuciones
+## Contribuciones
 
 Si deseas contribuir a este proyecto, no dudes en hacer un fork del repositorio, proponer mejoras o reportar problemas. ¡Toda ayuda es bienvenida!
 Contacto
