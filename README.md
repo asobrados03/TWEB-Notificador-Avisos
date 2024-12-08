@@ -20,9 +20,9 @@ erDiagram
     PROFESOR ||--|| PUBLICAR : "1,1"
     PUBLICAR ||--o{ AVISO : "1,N"
 
-    ESTUDIANTE ||--o{ DIRIGIR_A (*) : "1,N"
-    DIRIGIR_A (*) ||--o{ AVISO : "1,N"
-    DIRIGIR_A (*) {
+    ESTUDIANTE ||--o{ DIRIGIR_A(*) : "1,N"
+    DIRIGIR_A(*) ||--o{ AVISO : "1,N"
+    DIRIGIR_A(*) {
         boolean Leido
     }
 
