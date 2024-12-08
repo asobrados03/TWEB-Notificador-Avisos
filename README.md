@@ -59,7 +59,7 @@ En la app hay tres grandes paquetes funcionales:
 - Gestión de estudiantes (registrar estudiante, ...).
 - Gestión de avisos (publicar aviso, importar avisos, leer aviso, ...).
 
-Cuyas funcionalidades están repartidas entre los dos perfiles de usuario. Partiendo del modelo de contenido (en lo que se atañe a avisos, si nos ceñimos a la gestión de avisos) una posible representación de la navegabilidad podría ser:
+Las funcionalidades están distribuidas entre ambos perfiles de usuario. Basándonos en el modelo de contenido (específicamente en lo relacionado con los avisos, si nos enfocamos en la gestión de estos), una posible representación de la navegabilidad sería:
 
 ```mermaid
 graph TD
