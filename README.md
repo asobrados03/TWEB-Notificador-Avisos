@@ -159,6 +159,6 @@ Agradezco a mis profesores y compañeros por su apoyo y orientación durante el 
 ## Contribuciones
 
 Si deseas contribuir a este proyecto, no dudes en hacer un fork del repositorio, proponer mejoras o reportar problemas. ¡Toda ayuda es bienvenida!
-Contacto
+## Contacto
 
 Para cualquier consulta o comentario sobre este proyecto, puedes contactarme a través de mi perfil de GitHub.
