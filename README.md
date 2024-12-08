@@ -1,9 +1,9 @@
-# TWEB Notificador de Avisos
+# [TECNOLOGÍAS WEB] Notificador de Avisos
 En esta práctica académica realizada en el primer cuatrimestre del curso 2023-2024, saque una nota de 8,9/10.
 A continuación se mostrarán los diagramas realizados para el diseño de esta aplicación de notificación de avisos. El primer diagrama es un diagrama entidad-relación que modela el diseño conceptual de la base de datos que requiere la base de datos de la aplicación web, los dos otros diagramas son diagramas basados en la metodología UWE (UML-Based Web Engineering), la cual se utiliza para el diseño de aplicaciones web orientadas a servicios. Estos diagramas están enfocados en modelar tanto la estructura de la base de datos como las interacciones entre los usuarios y el sistema. A través de estos diagramas, se pretende visualizar de manera clara cómo los diferentes componentes de la aplicación interactúan entre sí y cómo se gestionan los avisos dentro de la plataforma.
 
 ## Diagrama Entidad-Relación de la Base de Datos de la aplicación
-El diagrama entidad-relación presenta el modelo conceptual de la base de datos, describiendo las entidades principales (USUARIO, ESTUDIANTE, PROFESOR, AVISO, DIRIGIR_A) y sus relaciones. DIRIGIR_A no es una entidad, sino una relación entre ESTUDIANTE y AVISO que incluye un atributo Leido, indicando si el estudiante ha leído el aviso. El diagrama también muestra cómo los ESTUDIANTES reciben AVISOS y cómo la entidad USUARIO se divide en ESTUDIANTE y PROFESOR, con roles distintos en el sistema.
+El diagrama entidad-relación presenta el modelo conceptual de la base de datos, describiendo las entidades principales (USUARIO, ESTUDIANTE, PROFESOR y AVISO) y sus relaciones. DIRIGIR_A es una relación entre ESTUDIANTE y AVISO que incluye un atributo Leido, indicando si el estudiante ha leído el aviso. El diagrama también muestra cómo los ESTUDIANTES reciben AVISOS, cómo la entidad USUARIO se divide en ESTUDIANTE y PROFESOR, con roles distintos en el sistema y el hecho de que el PROFESOR publica avisos en la plataforma para sus alumnos (representado en la relación PUBLICAR).
 
 ```mermaid
 erDiagram
