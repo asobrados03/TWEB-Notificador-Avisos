@@ -13,19 +13,23 @@ erDiagram
         string Nombre
         int NIA
     }
+
     %% Relación jerárquica
     USUARIO ||--o| PROFESOR : "Es un"
     USUARIO ||--o| ESTUDIANTE : "Es un"
 
+    %% Relaciones entre las entidades
     PROFESOR ||--|| PUBLICAR : "1,1"
     PUBLICAR ||--o{ AVISO : "1,N"
-
     ESTUDIANTE ||--o{ DIRIGIR_A : "1,N"
     DIRIGIR_A ||--o{ AVISO : "1,N"
+
+    %% Relación DIRIGIR_A con atributo
     DIRIGIR_A {
         boolean Leido
     }
 
+    %% Entidades
     AVISO {
         date FechaPub
         string Titulo
