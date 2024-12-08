@@ -21,8 +21,8 @@ erDiagram
     PUBLICAR ||--o{ AVISO : "1,N"
 
     ESTUDIANTE ||--o{ DIRIGIR_A : "1,N"
-    DIRIGIR_A ||--|| AVISO : "*"
-    DIRIGIR_A {
+    DIRIGIR_A ||--o{ AVISO : "1,N"
+    DIRIGIR_A (*) {
         boolean Leido
     }
 
@@ -34,7 +34,13 @@ erDiagram
     }
 ```
 
-"Explícitamente, se mantiene qué aviso va dirigido a qué estudiante en la relación DIRIGIR_A."
+"(*) Explícitamente, se mantiene qué aviso va dirigido a qué estudiante en la relación (DIRIGIR_A)."
+
+| IDAviso | IDAlumno |
+|---------|----------|
+|    1    |    1     |
+|    2    |    1     |
+|    2    |    2     |
 
 ## Diagrama de navegación UWE
 UWE propone otro modelo interesante, el modelo de navegabilidad, que es útil para representar cómo navegar dentro de la app, introduciendo componentes de navegabilidad: menús, índices, y procesos, que luego se traduce en componentes HTML concretos (por ejemplo, un menú aquí se traducirá en una barra de navegación HTML, es decir, en una lista (```<ul>```)), cuyos elementos (```<li>```) son enlaces (```<a>```), asociados a cada opción del menú), y permite distribuir la navegabilidad entre las diferentes acciones, ya sean de contenido o de procesamiento.
@@ -111,3 +117,25 @@ graph TD
 
 ### Nota adicional:
 "Este diagrama puede completarse incluyendo acciones de cada perfil para la gestión de Estudiantes dentro del menú correspondiente y acciones de la gestión de usuarios dentro del menú de usuario."
+
+## Diagrama de clases UWE
+### DIAGRAMA MODELO CONTENIDO (Metodología UWE)
+A partir del diagrama E-R considerado, podemos considerar que nuestra app debe gestionar/presentar contenido sobre **usuarios** (en particular, estudiantes) y **avisos**, lo cual puede representarse mediante el siguiente diagrama de clases:
+
+```mermaid
+classDiagram
+    class Notificador {
+    }
+    class Estudiante {
+    }
+    class Aviso {
+    }
+
+    class App {
+        "Representa nuestra app."
+    }
+
+    App -- Notificador
+    Notificador --> Estudiante : registrar *
+    Notificador --> Aviso : publicar *
+```
