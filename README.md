@@ -153,6 +153,67 @@ classDiagram
 ## Conclusión
 
 Este proyecto refleja un enfoque estructurado y metódico en el diseño y desarrollo de aplicaciones web orientadas a servicios. A través del uso de diagramas E-R y la metodología UWE, se ha logrado visualizar cómo interactúan los diferentes componentes del sistema, facilitando la implementación y el mantenimiento del mismo. La calificación obtenida en esta práctica es un reflejo del esfuerzo invertido y del aprendizaje adquirido.
+Basándome en el contenido del documento proporcionado, el procedimiento para preparar el entorno de trabajo y ejecutar el proyecto se describe claramente. A continuación, adapto la sección "Instrucciones de instalación" del README.md para reflejar estos pasos:
+
+---
+
+### Instrucciones de instalación
+
+#### Pre-requisitos
+Antes de comenzar, asegúrate de contar con:
+1. Una máquina virtual (o física) con **Ubuntu 20.04**.
+2. Acceso al sistema operativo a través de un cliente SSH.
+3. Un navegador web para probar la aplicación.
+
+#### Preparación del entorno
+1. **Instalación del sistema operativo y protocolo SSH**
+   - Instala Ubuntu 20.04 en la máquina virtual.
+   - Durante la instalación, habilita el protocolo SSH para acceder al sistema de manera remota.
+
+2. **Instalar el entorno LAMP (Linux, Apache, MySQL, PHP)**
+   Sigue los pasos detallados del tutorial de Digital Ocean [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-es).
+
+   - **Paso 1: Instalar Apache**
+     ```bash
+     sudo apt update
+     sudo apt install apache2
+     ```
+   - **Paso 2: Instalar MySQL**
+     ```bash
+     sudo apt install mysql-server
+     sudo mysql_secure_installation
+     ```
+   - **Paso 3: Instalar PHP**
+     ```bash
+     sudo apt install php libapache2-mod-php php-mysql
+     ```
+
+3. **Configurar directorios para la aplicación**
+   - Crear un directorio específico para la aplicación en `/var/www/mi_dominio`:
+     ```bash
+     sudo mkdir /var/www/mi_dominio
+     ```
+   - Agrega tus archivos HTML y PHP al directorio creado.
+
+4. **Activar directorios personales en Apache**
+   - Habilita el módulo `userdir` para permitir directorios públicos en cada usuario:
+     ```bash
+     sudo a2enmod userdir
+     ```
+   - Reinicia Apache para aplicar los cambios:
+     ```bash
+     sudo systemctl restart apache2
+     ```
+   - Crea un directorio `public_html` en tu directorio personal y añade los archivos `index.html` e `index.php`:
+     ```bash
+     mkdir ~/public_html
+     ```
+
+#### Probar la instalación
+1. Accede a los archivos HTML y PHP:
+   - **Archivo HTML:** [http://dominio-IP:puerto/~usuarioMaquinaVirtual/](http://dominio-IP:puerto/~usuarioMaquinaVirtual/)
+   - **Archivo PHP:** [http://dominio-IP:puerto/~usuarioMaquinaVirtual/index.php](http://dominio-IP:puerto/~usuarioMaquinaVirtual/index.php)
+
 ## Agradecimientos
 
 Agradezco a mis profesores y compañeros por su apoyo y orientación durante el desarrollo de esta práctica. Sus aportes han sido fundamentales para el éxito de este proyecto.
