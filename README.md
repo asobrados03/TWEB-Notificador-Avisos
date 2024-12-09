@@ -155,17 +155,15 @@ classDiagram
 Este proyecto refleja un enfoque estructurado y metódico en el diseño y desarrollo de aplicaciones web orientadas a servicios. A través del uso de diagramas E-R y la metodología UWE, se ha logrado visualizar cómo interactúan los diferentes componentes del sistema, facilitando la implementación y el mantenimiento del mismo. La calificación obtenida en esta práctica es un reflejo del esfuerzo invertido y del aprendizaje adquirido.
 Basándome en el contenido del documento proporcionado, el procedimiento para preparar el entorno de trabajo y ejecutar el proyecto se describe claramente. A continuación, adapto la sección "Instrucciones de instalación" del README.md para reflejar estos pasos:
 
----
+## Instrucciones de instalación
 
-### Instrucciones de instalación
-
-#### Pre-requisitos
+### Pre-requisitos
 Antes de comenzar, asegúrate de contar con:
 1. Una máquina virtual (o física) con **Ubuntu 20.04**.
 2. Acceso al sistema operativo a través de un cliente SSH.
 3. Un navegador web para probar la aplicación.
 
-#### Preparación del entorno
+### Preparación del entorno
 1. **Instalación del sistema operativo y protocolo SSH**
    - Instala Ubuntu 20.04 en la máquina virtual.
    - Durante la instalación, habilita el protocolo SSH para acceder al sistema de manera remota.
@@ -209,7 +207,7 @@ Antes de comenzar, asegúrate de contar con:
      mkdir ~/public_html
      ```
 
-#### Probar la instalación
+### Probar la instalación
 1. Accede a los archivos HTML y PHP:
    - **Archivo HTML:** [http://dominio-IP:puerto/~usuarioMaquinaVirtual/](http://dominio-IP:puerto/~usuarioMaquinaVirtual/)
    - **Archivo PHP:** [http://dominio-IP:puerto/~usuarioMaquinaVirtual/index.php](http://dominio-IP:puerto/~usuarioMaquinaVirtual/index.php)
