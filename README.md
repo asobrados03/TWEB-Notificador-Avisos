@@ -209,8 +209,9 @@ Antes de comenzar, asegúrate de contar con:
 
 ### Probar la instalación
 1. Accede a los archivos HTML y PHP:
-   - **Archivo HTML:** [http://dominio-IP:puerto/~usuarioMaquinaVirtual/](http://dominio-IP:puerto/~usuarioMaquinaVirtual/)
-   - **Archivo PHP:** [http://dominio-IP:puerto/~usuarioMaquinaVirtual/index.php](http://dominio-IP:puerto/~usuarioMaquinaVirtual/index.php)
+   - **Archivo HTML:** [http://dominio:puerto/~usuarioMaquinaVirtual/](http://dominio:puerto/~usuarioMaquinaVirtual/)
+   - **Archivo PHP:** [http://dominio:puerto/~usuarioMaquinaVirtual/index.php](http://dominio:puerto/~usuarioMaquinaVirtual/index.php)
+**NOTA**: El dominio indicado en la URL es la dirección web donde hayas alojado tu máquina virtual o el dominio donde hayas desplegado el proyecto. En el caso de que hayas desplegado el proyecto en local el dominio es localhost o la IP 127.0.0.1 (que es el localhost). El puerto debes indicarlo tú manualmente en la instalación.
 
 ## Agradecimientos
 
