@@ -20,8 +20,8 @@ erDiagram
         string Contenido
     }
     DIRIGIR_A_ESTUDIANTE {
-        integer Estudiante FK
-        integer Aviso FK
+        integer Estudiante FK PK
+        integer Aviso FK PK
         enum Leido
     }
 
