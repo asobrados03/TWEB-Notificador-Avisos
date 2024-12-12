@@ -8,11 +8,11 @@ El diagrama entidad-relación presenta el modelo conceptual de la base de datos,
 ```mermaid
 erDiagram
     USUARIO {
+        int NIA PK
         string Email
         string Contrasena
         string Login
         string Nombre
-        int NIA
     }
 
     %% Relación jerárquica
@@ -32,10 +32,10 @@ erDiagram
 
     %% Entidades
     AVISO {
+        int IDAviso PK
         date FechaPub
         string Titulo
         string Contenido
-        int IDAviso
     }
 ```
 
