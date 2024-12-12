@@ -2,6 +2,74 @@
 En esta práctica académica realizada en el primer cuatrimestre del curso 2023-2024, obtuve una calificación de 8,9/10.
 A continuación se mostrarán los diagramas realizados para el diseño de esta aplicación de notificación de avisos. El primer diagrama es un diagrama entidad-relación que modela el diseño conceptual de la base de datos que requiere la base de datos de la aplicación web, los otros dos diagramas son diagramas basados en la metodología UWE (UML-Based Web Engineering), la cual se utiliza para el diseño de aplicaciones web orientadas a servicios. Estos diagramas están enfocados en modelar tanto la estructura de la base de datos como las interacciones entre los usuarios y el sistema. A través de estos diagramas, se pretende visualizar de manera clara cómo los diferentes componentes de la aplicación interactúan entre sí y cómo se gestionan los avisos dentro de la plataforma.
 
+## Enunciado de la práctica [Notificador Avisos TWEB]
+
+### Descripción General
+
+La aplicación web permite a los profesores de Tecnologías Web notificar avisos a sus alumnos. Los avisos son pequeños elementos de información con un título o asunto descriptivo y un contenido informativo breve (máximo 150 caracteres). Los avisos pueden ser colectivos, dirigidos a todos los alumnos de la asignatura (por ejemplo, la comunicación de un cambio de laboratorio, fecha de examen, etc.) o individuales, dirigidos específicamente a cada estudiante (por ejemplo, la comunicación de una nota individual de un examen, la configuración personal de su máquina virtual, etc.).
+
+### Perfiles de Usuario
+
+1. **Profesor**
+2. **Estudiante**
+
+### Características de los Usuarios
+
+- Nombre
+- Correo electrónico (para login)
+- NIA (Número Identificación Alumno) único de 4 cifras
+  - Estudiantes: 100-9999
+  - Profesores: 1-99
+  - NIA 0 reservado para otros usos (p.e. Administrador del sistema)
+
+### Diagrama de Casos de Uso
+
+```mermaid
+graph TD
+    A[Usuario estudiante] --> B(Login)
+    A --> C(Consultar avisos)
+    A --> D(Restablecer contraseña)
+    C --> E(Filtrar avisos)
+    F[Usuario profesor] --> B
+    F --> C
+    F --> G(Registrar estudiante)
+    F --> H(Publicar aviso)
+    F --> I(Importar avisos)
+    I --> J(Recibir y verificar archivo avisos)
+```
+
+### Descripción de Casos de Uso
+
+#### Login
+Cualquier Usuario (ya sea estudiante o profesor) tendrá que identificarse en el sistema, indicando su nombre de usuario (su email) y su contraseña para acceder.
+
+#### Consultar avisos
+Un Usuario estudiante o profesor podrá consultar los avisos publicados. En el caso del Usuario estudiante, se llevará cuenta de los avisos ya leídos o no, para presentar los no leídos de forma resaltada.
+
+#### Filtrar avisos
+La lista de los avisos publicados se podrá filtrar por, al menos, un filtro, el que se considere más adecuado para cada perfil (por ejemplo, leído o no para el Usuario estudiante, y destinatario para el Usuario profesor).
+
+#### Restablecer contraseña
+Un Usuario estudiante podrá restablecer su contraseña.
+
+#### Registrar estudiante
+Un Usuario profesor podrá registrar a los estudiantes. Cada uno de ellos tendrá un NIA único y una dirección de correo electrónico válida, además de su nombre completo. El profesor asignará una contraseña inicial que el estudiante podrá modificar.
+
+#### Publicar aviso
+Un Usuario profesor podrá publicar un aviso dirigido bien a todos los alumnos o a uno específico (de los registrados en el momento de publicar el aviso). El aviso tendrá un asunto y un breve contenido (de no más de 150 caracteres) y se registrará la fecha de publicación.
+
+#### Importar avisos
+El Usuario profesor podrá subir al servidor un fichero de texto en el que, en cada línea, podrá incluir un aviso a enviar. Esta opción será útil para automatizar el envío masivo de avisos a los estudiantes. El archivo subido tendrá formato de texto .CSV (utilizando el separador punto y coma), teniendo los siguientes campos: NIA; nombreEstudiante; asunto; contenido.
+
+#### Recibir y verificar archivo avisos
+La aplicación estará preparada para recibir, almacenar y procesar el archivo de importación recibido, verificando la correcta sintaxis del archivo e informando de los posibles errores sintácticos.
+
+### Consideraciones Adicionales
+
+- El diseño del front-end (lado cliente) de la aplicación web DEBERÁ SER responsive.
+- Se valorará positivamente que el front-end (lado cliente) de la aplicación sea lo más interactivo posible.
+- Se valorará positivamente la seguridad de la aplicación (hasheado y fortaleza de contraseñas, conexión segura, prevención inyección de código y validación).
+
 ## Diagrama Entidad-Relación de la Base de Datos de la aplicación
 El diagrama entidad-relación presenta el modelo conceptual de la base de datos, describiendo las entidades principales (USUARIO, ESTUDIANTE, PROFESOR y AVISO) y sus relaciones. DIRIGIR_A es una relación entre ESTUDIANTE y AVISO que incluye un atributo Leido, indicando si el estudiante ha leído el aviso. El diagrama también muestra cómo los ESTUDIANTES reciben AVISOS, cómo la entidad USUARIO se divide en ESTUDIANTE y PROFESOR, con roles distintos en el sistema y el hecho de que el PROFESOR publica avisos en la plataforma para sus alumnos (representado en la relación PUBLICAR).
 
