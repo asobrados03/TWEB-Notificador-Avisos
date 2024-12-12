@@ -8,35 +8,26 @@ El diagrama entidad-relación presenta el modelo conceptual de la base de datos,
 ```mermaid
 erDiagram
     USUARIO {
-        int NIA PK
-        string Email
-        string Contrasena
-        string Login
+        integer NIA PK
         string Nombre
+        string Email
+        string Contrasenia
     }
-
-    %% Relación jerárquica
-    USUARIO ||--o| PROFESOR : "Es un"
-    USUARIO ||--o| ESTUDIANTE : "Es un"
-
-    %% Relaciones entre las entidades
-    PROFESOR ||--|| PUBLICAR : "1,1"
-    PUBLICAR ||--o{ AVISO : "1,N"
-    ESTUDIANTE ||--o{ DIRIGIR_A : "1,N"
-    DIRIGIR_A ||--o{ AVISO : "1,N"
-
-    %% Relación DIRIGIR_A con atributo
-    DIRIGIR_A {
-        boolean Leido
-    }
-
-    %% Entidades
     AVISO {
-        int IDAviso PK
-        date FechaPub
+        integer IDAviso PK
+        integer Profesor FK
         string Titulo
         string Contenido
     }
+    DIRIGIR_A_ESTUDIANTE {
+        integer Estudiante FK
+        integer Aviso FK
+        enum Leido
+    }
+
+    USUARIO ||--o| AVISO : Publica
+    AVISO ||--o| DIRIGIR_A_ESTUDIANTE : Dirige_a
+    USUARIO ||--o| DIRIGIR_A_ESTUDIANTE : Recibe
 ```
 
 "(En la relación "DIRIGIR_A") Explícitamente, se mantiene qué aviso va dirigido a qué estudiante."
