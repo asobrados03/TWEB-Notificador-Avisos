@@ -183,8 +183,8 @@ graph TD
     classDef nav_link_yellow fill:#ff9,stroke:#333,stroke-width:2px;
 ```
 
-#### Nota adicional:
-"Este diagrama puede completarse incluyendo acciones de cada perfil para la gestión de Estudiantes dentro del menú correspondiente y acciones de la gestión de usuarios dentro del menú de usuario."
+> [!NOTE]
+> "Este diagrama puede completarse incluyendo acciones de cada perfil para la gestión de Estudiantes dentro del menú correspondiente y acciones de la gestión de usuarios dentro del menú de usuario."
 
 ### Diagrama de clases UWE
 Este diagrama describe las clases principales del sistema y sus relaciones. Se visualizan los actores involucrados, como el Notificador, que es responsable de gestionar los avisos, y las clases de usuario como Estudiante. Las clases muestran sus métodos y atributos, reflejando cómo interactúan dentro de la aplicación. Además, el diagrama incluye las relaciones entre las clases, como la acción de registrar o publicar, lo que permite ver cómo los usuarios y los avisos interactúan con el sistema.
@@ -270,8 +270,8 @@ Antes de comenzar, asegúrate de contar con:
 1. Accede a los archivos HTML y PHP:
    - **Archivo HTML:** [http://dominio:puerto/~usuarioMaquinaVirtual/](http://dominio:puerto/~usuarioMaquinaVirtual/)
    - **Archivo PHP:** [http://dominio:puerto/~usuarioMaquinaVirtual/index.php](http://dominio:puerto/~usuarioMaquinaVirtual/index.php)
-
-**NOTA**: El dominio indicado en la URL es la dirección web donde hayas alojado tu máquina virtual o el dominio donde hayas desplegado el proyecto. En el caso de que hayas desplegado el proyecto en local el dominio es localhost o la IP 127.0.0.1 (que es el localhost). El puerto debes indicarlo tú manualmente en la instalación.
+> [!CAUTION]
+> El dominio indicado en la URL es la dirección web donde hayas alojado tu máquina virtual o el dominio donde hayas desplegado el proyecto. En el caso de que hayas desplegado el proyecto en local el dominio es localhost o la IP 127.0.0.1 (que es el localhost). El puerto debes indicarlo tú manualmente en la instalación.
 
 ## Agradecimientos
 
